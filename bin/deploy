@@ -2,8 +2,6 @@
 
 set -e
 
-git checkout -b master
-
 for x in {bundle,git,jekyll,rakep}; do
   type $x >/dev/null 2>&1 || { echo >&2 "$x command not available. Exiting."; exit 1; }
 done
