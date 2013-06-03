@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/txz4xwr.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2><a href="/">{{ site.name }}</a></h2>
+        <div id="moo"></div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div id="skirt">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  </body>
+</html>
