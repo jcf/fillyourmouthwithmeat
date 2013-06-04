@@ -6,8 +6,8 @@ for x in {bundle,git,jekyll,rakep}; do
   type $x >/dev/null 2>&1 || { echo >&2 "$x command not available. Exiting."; exit 1; }
 done
 
-git checkout --orphan master
-ENV=production bundle exec rakep
+git checkout --orphan gh-pages
+# ENV=production bundle exec rakep
 jekyll build --lsi --destination /tmp/site
 
 rm -r {*,.bundle,.gitignore}
@@ -17,6 +17,6 @@ rm -rf /tmp/site
 
 git add -A
 git commit -m "Site generated $(date)"
-git push -f origin master
-git checkout source
-git branch -D master
+git push -f origin gh-pages
+git checkout master
+git branch -D gh-pages
