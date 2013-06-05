@@ -1,0 +1,75 @@
+@import vendor/normalize
+@import compass
+@import responsive
+
+$font-family: helvetica, sans-serif
+$header-family: "bree-serif", sans-serif
+$skirt-height: 10em
+$text-color: #b26e73
+
+html
+  background-color: #f3efde
+  margin: 0
+  padding: 0
+
+body
+  margin: 0 auto
+  padding: 0
+  font-family: $font-family
+  color: #780012
+
+#map-canvas
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  position: absolute
+
+#skirt
+  padding: 0
+  margin: 0 auto
+  bottom: 0
+  right: 0
+  left: 0
+  position: absolute
+  background-color: #780012
+  background-color: rgba(#780012, 0.9)
+  color: #f3efde
+
+#info
+  padding: 1em 2em
+  text-shadow: 1px 1px 2px rgba(#000, 0.2), 1px 1px 4px rgba(#000, 0.05)
+  z-index: 100
+
+.moo
+  position: absolute
+  bottom: 0
+  right: 2em
+  height: $skirt-height * 0.8
+  opacity: 0.4
+  background-color: #f3efde
+  z-index: 10
+  mask: url(#moo)
+  -webkit-mask: url(/imgs/moo.svg) top center / cover
+  -o-mask: url(/imgs/moo.svg) top center / cover
+  -ms-mask: url(/imgs/moo.svg) top center / cover
+
+.site-name
+  font-family: $header-family
+  font-size: 2em
+  margin-bottom: 0
+
+.shout
+  text-transform: uppercase
+  letter-spacing: -0.05em
+  font-weight: 300
+
+a
+  color: #3b000b
+  text-decoration: none
+  padding: 0.1em 0.2em
+  margin: -0.1em -0.2em
+
+  &:hover
+    color: #4c3c3f
+    background-color: #e3daa4

@@ -1,1 +1,14 @@
+*~
+.bundle/bin
+.sass-cache
+/images
+/scripts
+/styles
+_drafts
+_gist_cache
+_posts/output.html
 _site
+scripts/app.js
+scripts/min
+styles/app.css
+version

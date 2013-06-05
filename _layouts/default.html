@@ -4,30 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=400px">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script type="text/javascript" src="//use.typekit.net/txz4xwr.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-    <link rel="stylesheet" href="/css/syntax.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/styles/app.css">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h2><a href="/">{{ site.name }}</a></h2>
-        <div id="moo"></div>
-      </div>
-    </header>
-
     <div class="container">
-      <div id="skirt">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
-      </div>
+      {{ content }}
     </div>
 
+    <script>minispade.require('app');</script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
