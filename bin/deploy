@@ -2,19 +2,30 @@
 
 set -e
 
+say() {
+  echo "\e[33m=>\e[0m $@"
+}
+
 for x in {bundle,git,jekyll,rakep}; do
   type $x >/dev/null 2>&1 || { echo >&2 "$x command not available. Exiting."; exit 1; }
 done
 
+say "Switching to empty gh-pages branch..."
 git checkout --orphan gh-pages
+
+say "Compiling assets..."
 ENV=production bundle exec rakep
+
+say "Building site..."
 jekyll build --lsi --destination /tmp/site
 
+say "Cleaning up..."
 rm -r {*,.bundle,.gitignore}
 mv /tmp/site/* .
 rm -rf .sass-cache
 rm -rf /tmp/site
 
+say "Pushing changes..."
 git add -A
 git commit -m "Site generated $(date)"
 git push -f origin gh-pages
