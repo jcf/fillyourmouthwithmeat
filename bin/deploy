@@ -3,7 +3,7 @@
 set -e
 
 say() {
-  echo "\e[33m=>\e[0m $@"
+  echo "\033[33m=>\033[0m $@"
 }
 
 for x in {bundle,git,jekyll,rakep}; do
