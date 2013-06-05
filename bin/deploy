@@ -20,9 +20,8 @@ say "Building site..."
 jekyll build --lsi --destination /tmp/site
 
 say "Cleaning up..."
-rm -r {*,.bundle,.gitignore}
+rm -rf {*,.ruby-version,.sass-cache}
 mv /tmp/site/* .
-rm -rf .sass-cache
 rm -rf /tmp/site
 
 say "Pushing changes..."
