@@ -1,2 +1,13 @@
 name: Fill your mouth with meat
 pygments: true
+
+exclude:
+  - Assetfile
+  - assets
+  - bin
+  - config.ru
+  - Gemfile
+  - Gemfile.lock
+  - lib
+  - Procfile
+  - tmp

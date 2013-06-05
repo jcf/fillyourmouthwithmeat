@@ -12,6 +12,7 @@ done
 
 say "Switching to empty gh-pages branch..."
 git checkout --orphan gh-pages
+git reset
 
 say "Compiling assets..."
 ENV=production bundle exec rakep
@@ -20,7 +21,12 @@ say "Building site..."
 jekyll build --lsi --destination /tmp/site
 
 say "Cleaning up..."
-rm -rf {*,.ruby-version,.sass-cache}
+rm -rf *
+rm .gitignore
+rm .ruby-version
+rm -r .sass-cache
+
+say "Moving generated site into place..."
 mv /tmp/site/* .
 rm -rf /tmp/site
 
